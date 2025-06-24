@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:8080'],
+  origin: ['https://domini-vercel.vercel.app'],
   methods: ['GET', 'POST', 'PUT']
 }));
 app.use(express.json());
