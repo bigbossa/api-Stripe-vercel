@@ -38,8 +38,8 @@ exports.createPaymentSession = async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: `${process.env.VITE_APP_URL  || 'https://domini-vercel.vercel.app'}/billing?success=true&billing_id=${billingId}`,
-      cancel_url: `${process.env.VITE_APP_URL || 'https://domini-vercel.vercel.app'}/billing?canceled=true`,
+        success_url: `${process.env.VITE_APP_URL || 'https://domini-vercel.vercel.app'}/payment-success?billing_id=${billingId}`,
+        cancel_url: `${process.env.VITE_APP_URL || 'https://domini-vercel.vercel.app'}/payment-canceled`,
       metadata: {
         billingId: billingId.toString(),
       },
